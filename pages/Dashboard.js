@@ -31,21 +31,22 @@ export default function Dashboard({navigation}) {
                      <View style={styles.introduction}>
                     <Text style={styles.introTxt}>TVL ICT stands for Technical-Vocational-Livelihood (TVL) Information Communication Technology strand. It is a national certificate program at Level II, focusing on developing the skills of a computer system service technician according to industry standards.</Text>
                 </View>
-                    <View style={styles.topicBox}>
+                  <View style={styles.topicBox}>
                         <View style={styles.topicImg}>
-                            <Image style={styles.topicLogo} source={require('../assets/hardware.jpg')} />
+                            <Image style={styles.topicLogo} source={require('../assets/heatsink.png')} />
+                            <Text style={styles.overlayText}>Hardware Components</Text>
                         </View>
-                        <TouchableOpacity style={styles.topicBtn}  onPress={() => navigation.navigate('Hardware')}>
-
+                        <TouchableOpacity style={styles.topicBtn} onPress={() => navigation.navigate('Hardware')}>
                             <Text style={styles.buttonText}>Learn more</Text>
                         </TouchableOpacity>
                     </View>
 
                     <View style={styles.topicBox}>
                         <View style={styles.topicImg}>
-                            <Image style={styles.topicLogo} source={require('../assets/hardware.jpg')} />
+                            <Image style={styles.topicLogo} source={require('../assets/laptop.png')} />
+                            <Text style={styles.overlayText}>Software Essentials</Text>
                         </View>
-                        <TouchableOpacity style={styles.topicBtn}>
+                        <TouchableOpacity style={styles.topicBtn} onPress={() => navigation.navigate('Software')}>
                             <Text style={styles.buttonText}>Learn more</Text>
                         </TouchableOpacity>
                     </View>
@@ -80,7 +81,19 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         marginTop: 20,
     },
-    
+    overlayText: {
+    position: 'absolute',
+    bottom: 10, 
+    left: 5,
+    fontSize: 30,
+    color: 'white',
+    padding: 5,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    borderRadius: 5,
+    letterSpacing: 1,
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
+},
     waveBox: {
         position: 'absolute',
         top: 60,

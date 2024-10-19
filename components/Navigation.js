@@ -7,19 +7,19 @@ export default function Navigation({ navigation }) {
   return (
     <SafeAreaView style={styles.content}>
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => alert('Home clicked!')}>
+        <TouchableOpacity onPress={() => navigation.navigate("Dashboard")}>
           <Text style={styles.link}>Home</Text>
         </TouchableOpacity>
         
         <TouchableOpacity 
           style={styles.logoutBtn} 
-          onPress={() => navigation.navigate("Login")} // Navigate to Login
+          onPress={() => navigation.navigate("Login")} 
         >
           <MaterialIcons name="logout" size={24} color="white" />
         </TouchableOpacity>
         
-        <TouchableOpacity onPress={() => alert('Profile clicked!')}>
-          <Text style={styles.link}>Profile</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("About")}>
+          <Text style={styles.link}>About</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

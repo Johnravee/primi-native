@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-export default function LeftSideImg({ text, title, ImageUrl }) {
+export default function LeftSideImg({ text, title, ImageUrl, borderRadiu}) {
     return (
         <View style={styles.container}>
             <View style={styles.imageBox}>
                 <Image 
                     source={ImageUrl}
-                    style={styles.image} 
+                    style={[styles.imageBox, { borderRadius: borderRadiu }]}
                 />
             </View>
             <View style={styles.textBox}>
@@ -47,11 +47,11 @@ const styles = StyleSheet.create({
         height: 170, 
         justifyContent: 'center', 
         alignItems: 'center', 
+         resizeMode: 'contain',
     },
     image: {
         width: '100%',
         height: '100%',
-        resizeMode: 'cover', 
-         borderRadius: 10, 
+       
     },
 });

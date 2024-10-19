@@ -5,6 +5,8 @@ import Login from './pages/Login';
 import Registration from './pages/Registration'; 
 import Dashboard from './pages/Dashboard'; 
 import Hardware from './pages/Hardwares';
+import  Software from './pages/Software';
+import About from './pages/About';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +33,18 @@ export default function App() {
          <Stack.Screen
           name="Hardware"
           component={Hardware}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="Software"
+          component={Software}
+          options={{ headerShown: false }}
+        />
+
+        <Stack.Screen
+          name="About"
+          component={About}
           options={{ headerShown: false }}
         />
      
